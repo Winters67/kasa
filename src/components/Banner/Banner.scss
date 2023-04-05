@@ -7,14 +7,12 @@
   top: 171px;
   background-image: url("../../assets/img/falaise.jpg");
   background-position: 100%;
-  position: absolute;
   border-radius: 25px;
+  margin-top: 80px;
 
   .opacityBg {
     width: 100%;
-    display: flex;
-    position: absolute;
-    border-radius: 25px;
+    display: flex;    border-radius: 25px;
     width: 1240px;
     height: 223px;
     background: transparentize($dark, 0.6);

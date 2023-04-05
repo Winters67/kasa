@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Medium";
+  src: local("Montserrat-Medium"), url("../../components/font/Montserrat-Medium.ttf") format("truetype");
+}
+/*|---------------| App Color Schema|---------------*/
+/*|---------------|MIXINS|---------------*/
 .main-container {
   width: 1240px;
   height: 223px;
@@ -5,18 +11,21 @@
   top: 171px;
   background-image: url("../../assets/img/falaise.jpg");
   background-position: 100%;
-  position: absolute;
   border-radius: 25px;
-  z-index: 0;
+  margin-top: 80px;
 }
 .main-container .opacityBg {
-  position: absolute;
-  z-index: 1;
+  width: 100%;
+  display: flex;
   border-radius: 25px;
   width: 1240px;
   height: 223px;
-  background-color: #000000;
+  background: rgba(0, 0, 0, 0.4);
+  align-items: center;
+  justify-content: space-around;
 }
 .main-container .opacityBg h1 {
-  color: blue;
+  color: #f6f6f6;
+  font-size: 48px;
+  font-weight: 500;
 }/*# sourceMappingURL=Banner.css.map */
