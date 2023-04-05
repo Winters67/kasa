@@ -8,6 +8,7 @@
 
 $primary: #ff6060;
 $secondary: #f6f6f6;
+$dark: #000000;
 
 // /*|---------------| @media #{$BREAKPOINT-DESK}|---------------*/
 
@@ -17,3 +18,8 @@ $BREAKPOINT-TABLET: "only screen and (min-width: 600px)";
 $BREAKPOINT-MOBILE-LAND: "only screen and (min-width: 480px)";
 
 /*|---------------|MIXINS|---------------*/
+@mixin BREAKPOINT-DESK {
+  @media #{$BREAKPOINT-DESK} {
+    max-width: 1440px;
+  }
+}

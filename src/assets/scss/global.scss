@@ -12,3 +12,8 @@ body {
   font-family: "Medium";
 }
 
+
+.App {
+  @include BREAKPOINT-DESK;
+
+}

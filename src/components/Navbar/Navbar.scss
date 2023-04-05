@@ -1,9 +1,11 @@
+@import "../../assets/scss/config.scss";
+
 nav {
   margin-right: 100px;
 
   a {
     text-decoration: none;
-    color: #ff6060;
+    color: $primary;
     font-size: 24px;
     font-family: "medium";
     margin: 57px;

@@ -1,0 +1,30 @@
+@import "../../assets/scss/config.scss";
+
+.main-container {
+  width: 1240px;
+  height: 223px;
+  left: 100px;
+  top: 171px;
+  background-image: url("../../assets/img/falaise.jpg");
+  background-position: 100%;
+  position: absolute;
+  border-radius: 25px;
+
+  .opacityBg {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    border-radius: 25px;
+    width: 1240px;
+    height: 223px;
+    background: transparentize($dark, 0.6);
+    align-items: center;
+    justify-content: space-around;
+
+    h1 {
+      color: $secondary;
+      font-size: 48px;
+      font-weight: 500;
+    }
+  }
+}

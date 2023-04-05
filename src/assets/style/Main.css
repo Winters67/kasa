@@ -15,6 +15,12 @@ body {
   font-family: "Medium";
 }
 
+@media only screen and (min-width: 1280px) {
+  .App {
+    max-width: 1440px;
+  }
+}
+
 .containerHearder {
   display: flex;
   justify-content: space-between;
@@ -36,4 +42,27 @@ nav a {
   font-size: 24px;
   font-family: "medium";
   margin: 57px;
+}
+
+.main-container {
+  width: 1240px;
+  height: 223px;
+  left: 100px;
+  top: 171px;
+  background-image: url("../../assets/img/falaise.jpg");
+  background-position: 100%;
+  position: absolute;
+  border-radius: 25px;
+  z-index: 0;
+}
+.main-container .opacityBg {
+  position: absolute;
+  z-index: 1;
+  border-radius: 25px;
+  width: 1240px;
+  height: 223px;
+  background: rgba(0, 0, 0, 0.5);
+}
+.main-container .opacityBg h1 {
+  color: blue;
 }/*# sourceMappingURL=Main.css.map */
