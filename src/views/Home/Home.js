@@ -1,19 +1,19 @@
 import "./Home.scss";
-import Header from "../../components/Header/Header";
-import Logements from "../../data/logements.json";
+
 
 function Home() {
-  const title = "Home const 2";
+  const title = "Chez vous, partout et ailleurs";
 
-  console.log(Logements);
+
 
   return (
-    <>
-      <Header />
+   
       <div className="App">
+        <div className="imgTitle">
         <h1>{title}</h1>
+        </div>
       </div>
-    </>
+ 
   );
 }
 

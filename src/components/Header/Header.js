@@ -1,9 +1,15 @@
 import "./Header.scss";
+import Logo from "../../assets/img/LOGO.svg";
+import Navbar from "../Navbar/Navbar";
 
 function Header() {
   return (
     <header className="App">
-      <h1>JE suis le header</h1>
+      <div className="containerHearder">
+      <img src={Logo} alt="logo kasa" />
+          <Navbar/>
+      
+      </div>
     </header>
   );
 }
