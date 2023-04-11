@@ -4,7 +4,7 @@ import Lodging from "./views/Lodging/Lodging";
 import About from "./views/About/About";
 import NotFoundPage from "./views/NotFoundPage/NotFoundPage ";
 import Header from "./components/Header/Header";
-import "./components/font/Montserrat-Medium.ttf";
+import "../src/assets/font/Montserrat-Medium.ttf";
 import Footer from "./components/Footer/Footer";
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
         <Route path="About" element={<About />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
