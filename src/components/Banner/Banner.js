@@ -1,8 +1,8 @@
 import "../Banner/Banner.scss";
 import React from "react";
 
-const Banner = () => {
-  const title = "Chez vous, partout et ailleurs";
+const Banner = ({ title, imageURL }) => {
+  // const title = "Chez vous, partout et ailleurs";
   return (
     <>
       <section className="main-container">

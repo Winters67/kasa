@@ -1,1 +1,24 @@
-/*# sourceMappingURL=NotFoundPage.css.map */
+@font-face {
+  font-family: "Medium";
+  src: local("Montserrat-Medium"), url("../../components/font/Montserrat-Medium.ttf") format("truetype");
+}
+/*|---------------| App Color Schema|---------------*/
+/*|---------------|MIXINS|---------------*/
+.ErreurContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #ff6060;
+}
+.ErreurContainer h1 {
+  margin-top: 100px;
+  font-weight: 700;
+  font-size: 288px;
+}
+.ErreurContainer p {
+  font-size: 36px;
+}
+.ErreurContainer a {
+  margin-top: 152px;
+  color: #ff6060;
+}/*# sourceMappingURL=NotFoundPage.css.map */

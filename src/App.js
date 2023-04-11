@@ -5,6 +5,7 @@ import About from "./views/About/About";
 import NotFoundPage from "./views/NotFoundPage/NotFoundPage ";
 import Header from "./components/Header/Header";
 import "./components/font/Montserrat-Medium.ttf";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -12,10 +13,11 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="Lodging" element={<Lodging />} />
+        <Route path="Lodging/{id}" element={<Lodging />} />
         <Route path="About" element={<About />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
+      <Footer/>
     </div>
   );
 }

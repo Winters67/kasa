@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Medium";
+  src: local("Montserrat-Medium"), url("../../components/font/Montserrat-Medium.ttf") format("truetype");
+}
+/*|---------------| App Color Schema|---------------*/
+/*|---------------|MIXINS|---------------*/
+.Card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.Card .ContainerCard {
+  margin-right: 50px;
+  width: 340px;
+  height: 340px;
+  background: #ff6060;
+  border-radius: 10px;
+}
+.Card .ContainerCard .BgFiltre {
+  width: 100%;
+  height: 340px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5));
+}/*# sourceMappingURL=Card.css.map */

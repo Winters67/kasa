@@ -10,6 +10,12 @@ $primary: #ff6060;
 $secondary: #f6f6f6;
 $dark: #000000;
 
+$Bg-gradient: linear-gradient(
+  to bottom,
+  rgba(255, 255, 255, 0),
+  rgba(0, 0, 0, 0.5)
+);
+
 // /*|---------------| @media #{$BREAKPOINT-DESK}|---------------*/
 
 $BREAKPOINT-DESK: "only screen and (min-width: 1280px)";

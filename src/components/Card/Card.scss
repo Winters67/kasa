@@ -1,0 +1,23 @@
+@import "../../assets/scss/config.scss";
+
+.Card {
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: space-between;
+  // gap :56px;
+
+  .ContainerCard {
+    margin-right: 50px;
+    width: 340px;
+    height: 340px;
+    background: $primary;
+    border-radius: 10px;
+
+    .BgFiltre {
+      width: 100%;
+      height: 340px;
+      background: $Bg-gradient;
+    }
+  }
+}
