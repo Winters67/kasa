@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Medium";
-  src: local("Montserrat-Medium"), url("../../components/font/Montserrat-Medium.ttf") format("truetype");
+  src: local("Montserrat-Medium"), url("../../assets/font/Montserrat-Medium.ttf") format("truetype");
 }
 /*|---------------| App Color Schema|---------------*/
 /*|---------------|MIXINS|---------------*/
@@ -14,6 +14,7 @@
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
+  margin-top: 30px;
 }
 .ContainerFooter img {
   margin-top: 66px;

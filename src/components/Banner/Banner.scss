@@ -1,19 +1,19 @@
 @import "../../assets/scss/config.scss";
 
 .main-container {
-  width: 1240px;
+
+ width: 1240px;
   height: 223px;
-  left: 100px;
+  left: auto;
   top: 171px;
-  background-image: url("../../assets/img/falaise.jpg");
   background-position: 100%;
   border-radius: 25px;
   margin-top: 80px;
 
   .opacityBg {
-    width: 100%;
-    display: flex;    border-radius: 25px;
-    width: 1240px;
+       display: flex;
+    border-radius: 25px;
+    max-width: 1240px;
     height: 223px;
     background: transparentize($dark, 0.6);
     align-items: center;

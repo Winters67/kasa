@@ -1,0 +1,12 @@
+@import "../../assets/scss/config.scss";
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  button {
+    @include button;
+  }
+
+}

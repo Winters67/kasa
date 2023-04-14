@@ -1,1 +1,31 @@
-/*# sourceMappingURL=About.css.map */
+@font-face {
+  font-family: "Medium";
+  src: local("Montserrat-Medium"), url("../../assets/font/Montserrat-Medium.ttf") format("truetype");
+}
+/*|---------------| App Color Schema|---------------*/
+/*|---------------|MIXINS|---------------*/
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main button {
+  display: flex;
+  text-align: inherit;
+  padding-left: 18.8px;
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #f6f6f6;
+  background-color: #ff6060;
+  width: 1023px;
+  height: 47px;
+  border: none;
+  display: block;
+  float: none;
+  margin: 30px auto 0;
+}
+main button img {
+  width: 20px;
+  margin-left: 10px;
+}/*# sourceMappingURL=About.css.map */

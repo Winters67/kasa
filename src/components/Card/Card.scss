@@ -1,23 +1,38 @@
 @import "../../assets/scss/config.scss";
 
-.Card {
-  display: flex;
+.ContainerCard {
+  position: relative;
+  width: 340px;
+  height: 340px;
+  border-radius: 10px;
+  overflow: hidden;
 
-  flex-wrap: wrap;
-  justify-content: space-between;
-  // gap :56px;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-  .ContainerCard {
-    margin-right: 50px;
-    width: 340px;
-    height: 340px;
-    background: $primary;
+  .BgFiltre {
+    position: absolute;
+    background: $Bg-gradient;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
+    z-index: 1;
 
-    .BgFiltre {
-      width: 100%;
-      height: 340px;
-      background: $Bg-gradient;
+    h1 {
+      max-width: 60%;
+      color: #ffff;
+      font-weight: 500;
+      font-size: 18px;
+      margin: 20px;
+      z-index: 2;
     }
   }
 }
