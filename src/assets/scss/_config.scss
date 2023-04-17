@@ -31,12 +31,10 @@ $BREAKPOINT-MOBILE-LAND: "only screen and (min-width: 480px)";
 }
 
 @mixin button {
-  display: flex;
-  text-align: inherit;
   padding-left: 18.8px;
   border-radius: 5px;
- font-size: 24px;
- font-weight: 500;
+  font-size: 24px;
+  font-weight: 500;
   color: $secondary;
   background-color: #ff6060;
   width: 1023px;
@@ -45,10 +43,9 @@ $BREAKPOINT-MOBILE-LAND: "only screen and (min-width: 480px)";
   display: block;
   float: none;
   margin: 30px auto 0;
-  
+
   img {
     width: 20px;
     margin-left: 10px;
-    
   }
 }

@@ -1,18 +1,17 @@
-import React, { useState } from "react";
-import DatasLodging from "../../data/logements.json";
+import React from "react";
 
-const CardDisplay = () => {
-  const [datasLodging, setDatasLodging] = useState(DatasLodging);
-  console.log(datasLodging);
+const Card = ({ title, cover, id }) => {
 
-  return datasLodging.map((card) => (
-    <article className="ContainerCard">
-      <img src={(`${card.cover}`)} alt="" />
-      <div className="BgFiltre">
-        <h1>{card.title}</h1>
-      </div>
-    </article>
-  ));
+  return (
+    <a href={`/lodging/${id}`} className="card-link">
+      <article className="ContainerCard">
+        <img src={cover} alt="" />
+        <div className="BgFiltre">
+          <h1>{title}</h1>
+        </div>
+      </article>
+    </a>
+  );
 };
 
-export default CardDisplay;
+export default Card;

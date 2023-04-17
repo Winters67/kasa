@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "Medium";
   src: local("Montserrat-Medium"), url("../../assets/font/Montserrat-Medium.ttf") format("truetype");
@@ -44,6 +43,12 @@ body {
   font-size: 24px;
 }
 
+@font-face {
+  font-family: "Medium";
+  src: local("Montserrat-Medium"), url("../../assets/font/Montserrat-Medium.ttf") format("truetype");
+}
+/*|---------------| App Color Schema|---------------*/
+/*|---------------|MIXINS|---------------*/
 .containerHearder {
   width: 1240px;
   margin: auto;
@@ -57,12 +62,6 @@ body {
   height: 68px;
 }
 
-@font-face {
-  font-family: "Medium";
-  src: local("Montserrat-Medium"), url("../../assets/font/Montserrat-Medium.ttf") format("truetype");
-}
-/*|---------------| App Color Schema|---------------*/
-/*|---------------|MIXINS|---------------*/
 nav a {
   text-decoration: none;
   color: #ff6060;
@@ -142,30 +141,49 @@ nav a {
   z-index: 2;
 }
 
-.fade {
-  transition: height 0.5s ease-in-out; /* Transition de hauteur de 0,5 seconde avec une courbe d'accélération et de décélération */
-  overflow: hidden; /* Cacher le contenu qui dépasse */
-}
-
-.fade.out {
-  opacity: 0;
-  display: none;
-}
-
 @font-face {
   font-family: "Medium";
   src: local("Montserrat-Medium"), url("../../assets/font/Montserrat-Medium.ttf") format("truetype");
 }
 /*|---------------| App Color Schema|---------------*/
 /*|---------------|MIXINS|---------------*/
-.square {
-  width: 100%;
-  height: 100%;
-  background-color: #F6F6F6;
-  width: 1023px;
+.collapse {
+  margin: 10px 0;
+}
+
+.collapse button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 10px;
-  margin-bottom: 30px;
-  border-radius: 5px;
+  width: 1023px;
+  height: 47px;
+  background-color: #ff6060;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.collapse button img {
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.collapse button.open img {
+  transform: rotate(180deg);
+}
+
+.collapse-content {
+  font-size: 24px;
+  max-width: 1023px;
+  padding: 20px;
+  margin: 10px;
+  background-color: #f6f6f6;
+  color: #ff6060;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
 }
 
 @font-face {
@@ -203,8 +221,6 @@ main {
   align-items: center;
 }
 main button {
-  display: flex;
-  text-align: inherit;
   padding-left: 18.8px;
   border-radius: 5px;
   font-size: 24px;
@@ -217,6 +233,10 @@ main button {
   display: block;
   float: none;
   margin: 30px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 18.8px;
 }
 main button img {
   width: 20px;

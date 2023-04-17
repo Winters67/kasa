@@ -1,14 +1,18 @@
 import "./Header.scss";
 import Logo from "../../assets/img/LOGO.svg";
-import Navbar from "../Navbar/Navbar";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <header className="App">
       <div className="containerHearder">
-      <img src={Logo} alt="logo kasa" />
-          <Navbar/>
-      
+        <Link to="/">
+          <img src={Logo} alt="logo kasa" />
+        </Link>
+        <nav>
+          <Link to="/">Accueil</Link>
+          <Link to="/about">A Propos</Link>
+        </nav>
       </div>
     </header>
   );

@@ -1,3 +1,4 @@
+@import "../../assets/scss/config.scss";
 
 .containerHearder {
   
@@ -17,4 +18,13 @@ align-items: center;
 
   
 }
-  
+
+nav {
+  a {
+    text-decoration: none;
+    color: $primary;
+    font-size: 24px;
+    font-family: "medium";
+    margin-left: 57px;
+  }
+}

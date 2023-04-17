@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Medium";
+  src: local("Montserrat-Medium"), url("../../assets/font/Montserrat-Medium.ttf") format("truetype");
+}
+/*|---------------| App Color Schema|---------------*/
+/*|---------------|MIXINS|---------------*/
 .containerHearder {
   width: 1240px;
   margin: auto;
@@ -9,4 +15,12 @@
 .containerHearder img {
   width: 210.32px;
   height: 68px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ff6060;
+  font-size: 24px;
+  font-family: "medium";
+  margin-left: 57px;
 }/*# sourceMappingURL=Header.css.map */

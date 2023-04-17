@@ -10,8 +10,6 @@ main {
   align-items: center;
 }
 main button {
-  display: flex;
-  text-align: inherit;
   padding-left: 18.8px;
   border-radius: 5px;
   font-size: 24px;
@@ -24,6 +22,10 @@ main button {
   display: block;
   float: none;
   margin: 30px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 18.8px;
 }
 main button img {
   width: 20px;
