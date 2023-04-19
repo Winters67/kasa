@@ -8,6 +8,10 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
+}
+main .containerCollapse {
+  position: relative;
 }
 main button {
   padding-left: 18.8px;

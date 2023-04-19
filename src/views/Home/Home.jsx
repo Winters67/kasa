@@ -10,13 +10,14 @@ function Home() {
 
   return (
     <main className="home-container">
+
       <Banner imageURL={imageURL} title="Chez vous, partout et ailleurs" />
       <section className="gallery">
 
         {DatasLodging.map((lodging) => (
-          <Card key={lodging.id} title={lodging.title} cover={lodging.cover} />
+          <Card key={lodging.id} id={lodging.id} title={lodging.title} cover={lodging.cover} />
         ))}
-      
+
 
       </section>
     </main>
