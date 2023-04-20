@@ -1,0 +1,17 @@
+@import "../../assets/scss/config.scss";
+
+.tag{
+align-items: center;
+justify-content: center;
+border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: $secondary;
+  background-color: #ff6060;
+  min-width: 115px;
+  width: auto;
+  height: 25px;
+  display: flex;
+  margin: 10px;
+   padding: 20px auto;
+}

@@ -1,1 +1,66 @@
-/*# sourceMappingURL=Lodging.css.map */
+@font-face {
+  font-family: "Medium";
+  src: local("Montserrat-Medium"), url("../../assets/font/Montserrat-Medium.ttf") format("truetype");
+}
+/*|---------------| App Color Schema|---------------*/
+/*|---------------|MIXINS|---------------*/
+.mainLodging {
+  display: flex;
+  flex-direction: column;
+}
+
+.lodging-info {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px 100px 0px 100px;
+}
+
+.titleLodging {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #ff6060;
+}
+.titleLodging h1 {
+  font-size: 36px;
+}
+.titleLodging .h4 {
+  font-size: 18px;
+}
+
+.ProfilLodging {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.ProfilLodging img {
+  width: 64px;
+  border-radius: 50%;
+  align-items: center;
+}
+.ProfilLodging p {
+  margin-right: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ff6060;
+  max-width: 30%;
+}
+@media only screen and (max-width: 768px) {
+  .ProfilLodging p {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.tagContainer {
+  display: flex;
+}/*# sourceMappingURL=Lodging.css.map */

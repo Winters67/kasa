@@ -2,6 +2,7 @@ import React from "react";
 import DatasLodging from "../../data/logements.json";
 import { useParams } from "react-router-dom";
 import Slider from "../../components/Slider/Slider";
+import Tag from "../../components/Tag/Tag";
 
 const Lodging = () => {
   const { id } = useParams();
@@ -17,22 +18,29 @@ const Lodging = () => {
   }
 
   return (
-    <main>
-      <section key={lodging.id}>
+    <main className="mainLodging">
+      <section className="slider-section" key={lodging.id}>
         <Slider
           pictures={pictures}
           defaultValue={currentIndex}
           onChange={handleSliderChange}
-        ></Slider>
+        />
       </section>
-      <article className="titleLodging">
-        <h1>{lodging.title}</h1>
-        <h4>{lodging.location}</h4>
+      <article className="lodging-info">
+        <article className="titleLodging">
+          <h1>{lodging.title}</h1>
+          <h4>{lodging.location}</h4>
+        </article>
+        <article className="ProfilLodging">
+          <p>{lodging.host.name}</p>
+          <img src={pictureProfil} alt="profile" />
+        </article>
       </article>
-      <article className="ProfilLodging">
-        <p>{lodging.host.name}</p>
-        <img src={pictureProfil} alt="profile" />
-      </article>
+      <div className="tagContainer">
+        {lodging.tags.map((tag, index) => (
+          <Tag tag={tag} key={index} />
+        ))}
+      </div>
     </main>
   );
 };

@@ -9,7 +9,7 @@ const About = () => {
  
   const imageURL = montagne;
   return (
-    <main>
+    <main className="mainAbout" >
       <Banner imageURL={imageURL} />
       <section className="containerCollapse">
       {squareData.map((square) => (

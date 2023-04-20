@@ -187,6 +187,80 @@ nav a {
   border-radius: 0 0 5px 5px;
 }
 
+.SliderContainer {
+  display: flex;
+  position: relative;
+  width: 1240px;
+  height: 415px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 25px;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.SliderContainer img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  width: 100%;
+  height: 415px;
+  z-index: -1;
+}
+
+.SliderContainer button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  outline: none;
+  border: none;
+}
+
+.SliderContainer button img {
+  width: 100%;
+  height: auto;
+}
+
+.SliderContainer button.prev {
+  margin: 0;
+  left: 20px;
+}
+
+.SliderContainer button.next {
+  margin: 0;
+  right: 20px;
+}
+
+.current-photo-number {
+  color: #ffffff;
+  font-size: 18px;
+  padding: 5px 10px;
+  position: absolute;
+  padding: 24px;
+}
+
+@font-face {
+  font-family: "Medium";
+  src: local("Montserrat-Medium"), url("../../assets/font/Montserrat-Medium.ttf") format("truetype");
+}
+/*|---------------| App Color Schema|---------------*/
+/*|---------------|MIXINS|---------------*/
+.tag {
+  display: block;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #f6f6f6;
+  background-color: #ff6060;
+  width: 115px;
+  height: 25px;
+  display: flex;
+  margin: 10px;
+}
+
 @font-face {
   font-family: "Medium";
   src: local("Montserrat-Medium"), url("../../assets/font/Montserrat-Medium.ttf") format("truetype");
@@ -216,16 +290,16 @@ nav a {
 }
 /*|---------------| App Color Schema|---------------*/
 /*|---------------|MIXINS|---------------*/
-main {
+.mainAbout {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%;
 }
-main .containerCollapse {
+.mainAbout .containerCollapse {
   position: relative;
 }
-main button {
+.mainAbout button {
   padding-left: 18.8px;
   border-radius: 5px;
   font-size: 24px;
@@ -243,9 +317,72 @@ main button {
   justify-content: space-between;
   padding-right: 18.8px;
 }
-main button img {
+.mainAbout button img {
   width: 20px;
   margin-left: 10px;
+}
+
+@font-face {
+  font-family: "Medium";
+  src: local("Montserrat-Medium"), url("../../assets/font/Montserrat-Medium.ttf") format("truetype");
+}
+/*|---------------| App Color Schema|---------------*/
+/*|---------------|MIXINS|---------------*/
+.mainLodging {
+  display: flex;
+  flex-direction: column;
+}
+
+.lodging-info {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px 100px 0px 100px;
+}
+
+.titleLodging {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #ff6060;
+}
+.titleLodging h1 {
+  font-size: 36px;
+}
+.titleLodging .h4 {
+  font-size: 18px;
+}
+
+.ProfilLodging {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.ProfilLodging img {
+  width: 64px;
+  border-radius: 50%;
+  align-items: center;
+}
+.ProfilLodging p {
+  margin-right: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ff6060;
+  max-width: 30%;
+}
+@media only screen and (max-width: 768px) {
+  .ProfilLodging p {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+img {
+  max-width: 100%;
 }
 
 @font-face {

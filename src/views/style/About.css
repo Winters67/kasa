@@ -4,16 +4,16 @@
 }
 /*|---------------| App Color Schema|---------------*/
 /*|---------------|MIXINS|---------------*/
-main {
+.mainAbout {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%;
 }
-main .containerCollapse {
+.mainAbout .containerCollapse {
   position: relative;
 }
-main button {
+.mainAbout button {
   padding-left: 18.8px;
   border-radius: 5px;
   font-size: 24px;
@@ -31,7 +31,7 @@ main button {
   justify-content: space-between;
   padding-right: 18.8px;
 }
-main button img {
+.mainAbout button img {
   width: 20px;
   margin-left: 10px;
 }/*# sourceMappingURL=About.css.map */
