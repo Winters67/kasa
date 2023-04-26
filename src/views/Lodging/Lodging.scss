@@ -3,6 +3,8 @@
 .mainLodging {
   display: flex;
   flex-direction: column;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .lodging-info {
@@ -34,7 +36,7 @@
 
 .ProfilLodging {
   display: flex;
-justify-content: flex-end;
+  justify-content: flex-end;
   align-items: center;
 
   img {
@@ -43,11 +45,13 @@ justify-content: flex-end;
     align-items: center;
   }
   p {
-    margin-right: 10px;
+    display: flex;
+    margin-right: 20px;
     font-size: 18px;
     font-weight: 500;
     color: $primary;
     max-width: 30%;
+    justify-content: flex-end;
 
     @media only screen and (max-width: 768px) {
       margin-right: 0;
@@ -61,5 +65,33 @@ img {
 }
 .tagContainer {
   display: flex;
-  
+  justify-content: space-between;
+  margin: 0px 100px 0px 100px;
+  .tags {
+    display: flex;
+    margin-left: 0px;
+  }
+}
+
+.equipementContainer {
+  margin: 0px 100px 0px 100px;
+  display: flex;
+  justify-content: space-between;
+
+  .description,
+  .equipments {
+    button {
+      border-radius: 10px;
+      width: 582px;
+      font-size: 18px;
+    }
+    width: 582px;
+    font-size: 18px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
 }

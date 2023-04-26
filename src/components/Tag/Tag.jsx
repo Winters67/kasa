@@ -2,10 +2,10 @@ import React from 'react';
 import "../Tag/Tag.scss";
 
 
-const Tag = (props) => {
+const Tag = ({tag}) => {
     return (
         <div className='tag'>
-            {props.tag}
+            {tag}
         </div>
     );
 };

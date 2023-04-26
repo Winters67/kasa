@@ -24,11 +24,11 @@ $BREAKPOINT-TABLET: "only screen and (min-width: 600px)";
 $BREAKPOINT-MOBILE-LAND: "only screen and (min-width: 480px)";
 
 /*|---------------|MIXINS|---------------*/
-@mixin BREAKPOINT-DESK {
-  @media #{$BREAKPOINT-DESK} {
-    max-width: 1440px;
-  }
-}
+// @mixin BREAKPOINT-DESK {
+//   @media #{$BREAKPOINT-DESK} {
+//     max-width: 1440px;
+//   }
+// }
 
 @mixin button {
   padding-left: 18.8px;

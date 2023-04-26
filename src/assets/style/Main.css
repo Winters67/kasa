@@ -249,16 +249,19 @@ nav a {
 /*|---------------| App Color Schema|---------------*/
 /*|---------------|MIXINS|---------------*/
 .tag {
-  display: block;
-  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
   font-size: 14px;
   font-weight: 500;
   color: #f6f6f6;
   background-color: #ff6060;
-  width: 115px;
+  min-width: 115px;
+  width: auto;
   height: 25px;
   display: flex;
   margin: 10px;
+  padding: 20px auto;
 }
 
 @font-face {
@@ -368,11 +371,13 @@ nav a {
   align-items: center;
 }
 .ProfilLodging p {
-  margin-right: 10px;
+  display: flex;
+  margin-right: 20px;
   font-size: 18px;
   font-weight: 500;
   color: #ff6060;
   max-width: 30%;
+  justify-content: flex-end;
 }
 @media only screen and (max-width: 768px) {
   .ProfilLodging p {
@@ -383,6 +388,18 @@ nav a {
 
 img {
   max-width: 100%;
+}
+
+.tagContainer {
+  display: flex;
+  justify-content: space-around;
+}
+.tagContainer .tags {
+  display: flex;
+}
+
+.equipementContainer {
+  display: flex;
 }
 
 @font-face {

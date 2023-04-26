@@ -18,7 +18,6 @@ const Collapse = ({ visible, children, title, text }) => {
 
   return (
     <div className={className}>
-      {children}
       <div className="collapse">
         <button onClick={toggle} className={buttonClass}>
           {title}
@@ -26,7 +25,7 @@ const Collapse = ({ visible, children, title, text }) => {
         </button>
         {open && (
           <div className="collapse-content">
-            {text}
+            {text}{children}
           </div>
         )}
       </div>
