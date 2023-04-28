@@ -8,13 +8,17 @@
 
   .containerCollapse {
     position: relative;
+    padding-top: 20px;
+    
   }
 
   button {
+    
     @include button;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-right: 18.8px;
+   
   }
 }

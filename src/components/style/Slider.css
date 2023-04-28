@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Medium";
+  src: local("Montserrat-Medium"), url("../../assets/font/Montserrat-Medium.ttf") format("truetype");
+}
+/*|---------------| App Color Schema|---------------*/
+/*|---------------|MIXINS|---------------*/
 .SliderContainer {
   display: flex;
   position: relative;
@@ -9,6 +15,22 @@
   justify-content: center;
   align-items: flex-end;
 }
+@media only screen and (max-width : 1200px) {
+  .SliderContainer {
+    width: 100%;
+  }
+}
+@media only screen and (max-width : 768px) {
+  .SliderContainer {
+    height: 250px;
+  }
+}
+@media only screen and (max-width : 480px) {
+  .SliderContainer {
+    height: 150px;
+    border-radius: 0;
+  }
+}
 
 .SliderContainer img {
   -o-object-fit: cover;
@@ -17,6 +39,16 @@
   width: 100%;
   height: 415px;
   z-index: -1;
+}
+@media only screen and (max-width : 768px) {
+  .SliderContainer img {
+    height: 250px;
+  }
+}
+@media only screen and (max-width : 480px) {
+  .SliderContainer img {
+    height: 150px;
+  }
 }
 
 .SliderContainer button {
@@ -29,6 +61,12 @@
   outline: none;
   border: none;
 }
+@media only screen and (max-width : 480px) {
+  .SliderContainer button {
+    width: 20px;
+    height: 20px;
+  }
+}
 
 .SliderContainer button img {
   width: 100%;
@@ -39,10 +77,20 @@
   margin: 0;
   left: 20px;
 }
+@media only screen and (max-width : 480px) {
+  .SliderContainer button.prev {
+    left: 10px;
+  }
+}
 
 .SliderContainer button.next {
   margin: 0;
   right: 20px;
+}
+@media only screen and (max-width : 480px) {
+  .SliderContainer button.next {
+    right: 10px;
+  }
 }
 
 .current-photo-number {
@@ -51,4 +99,16 @@
   padding: 5px 10px;
   position: absolute;
   padding: 24px;
+}
+@media only screen and (max-width : 768px) {
+  .current-photo-number {
+    font-size: 16px;
+    padding: 20px;
+  }
+}
+@media only screen and (max-width : 480px) {
+  .current-photo-number {
+    font-size: 12px;
+    padding: 10px;
+  }
 }/*# sourceMappingURL=Slider.css.map */

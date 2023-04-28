@@ -1,8 +1,7 @@
 @import "../../assets/scss/config.scss";
 
 .main-container {
-
- width: 1240px;
+  width: 1240px;
   height: 223px;
   left: auto;
   top: 171px;
@@ -11,7 +10,7 @@
   margin-top: 80px;
 
   .opacityBg {
-       display: flex;
+    display: flex;
     border-radius: 25px;
     max-width: 1240px;
     height: 223px;
@@ -23,6 +22,43 @@
       color: $secondary;
       font-size: 48px;
       font-weight: 500;
+    }
+  }
+
+  @media #{$BREAKPOINT-TABLETS} {
+    width: 768px;
+    height: 150px;
+    top: 120px;
+    margin-top: 50px;
+    .opacityBg {
+      max-width: 768px;
+      height: 150px;
+      h1 {
+        font-size: 36px;
+      }
+    }
+  }
+
+  @media #{$BREAKPOINT-MOBILE} {
+    width: 335px;
+    height: 111px;
+    top: 80px;
+    margin-top: 30px;
+    .opacityBg {
+      max-width: 335px;
+      height: 111px;
+      .banner-text {
+        
+        display: flex;
+        flex-direction: column;
+        font-size: 24px;
+        span:first-child {
+          width: 100%;
+        }
+        span:last-child {
+          white-space: pre-wrap;
+        }
+      }
     }
   }
 }

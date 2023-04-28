@@ -37,4 +37,24 @@
   font-size: 18px;
   margin: 20px;
   z-index: 2;
+}
+@media only screen and (max-width : 768px) {
+  .ContainerCard {
+    width: 290px;
+    height: 290px;
+  }
+  .ContainerCard .BgFiltre h1 {
+    font-size: 16px;
+    margin: 15px;
+  }
+}
+@media only screen and (max-width : 480px) {
+  .ContainerCard {
+    width: 90vw;
+    height: 255px;
+  }
+  .ContainerCard .BgFiltre h1 {
+    font-size: 14px;
+    margin: 10px;
+  }
 }/*# sourceMappingURL=Card.css.map */

@@ -11,7 +11,8 @@ function Home() {
   return (
     <main className="home-container">
 
-      <Banner imageURL={imageURL} title="Chez vous, partout et ailleurs" />
+      <Banner imageURL={imageURL} title="Chez vous," title1=" partout et ailleurs"/>
+
       <section className="gallery">
 
         {DatasLodging.map((lodging) => (

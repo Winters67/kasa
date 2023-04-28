@@ -12,6 +12,7 @@
 }
 .mainAbout .containerCollapse {
   position: relative;
+  padding-top: 20px;
 }
 .mainAbout button {
   padding-left: 18.8px;
@@ -20,18 +21,8 @@
   font-weight: 500;
   color: #f6f6f6;
   background-color: #ff6060;
-  width: 1023px;
-  height: 47px;
-  border: none;
-  display: block;
-  float: none;
-  margin: 30px auto 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-right: 18.8px;
-}
-.mainAbout button img {
-  width: 20px;
-  margin-left: 10px;
 }/*# sourceMappingURL=About.css.map */

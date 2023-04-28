@@ -22,6 +22,7 @@ body {
 /*|---------------| App Color Schema|---------------*/
 /*|---------------|MIXINS|---------------*/
 .ContainerFooter {
+  position: relative;
   background-color: #000000;
   bottom: 0;
   color: #f6f6f6;
@@ -33,6 +34,7 @@ body {
   flex-direction: column;
   align-items: center;
   margin-top: 80px;
+  width: 100%;
 }
 .ContainerFooter img {
   margin-top: 66px;
@@ -42,6 +44,23 @@ body {
 .ContainerFooter p {
   margin-bottom: 29px;
   font-size: 24px;
+}
+@media only screen and (max-width : 768px) {
+  .ContainerFooter {
+    width: 100vh;
+  }
+  .ContainerFooter p {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width : 480px) {
+  .ContainerFooter {
+    width: 100%;
+  }
+  .ContainerFooter p {
+    margin-bottom: 15px;
+    font-size: 12px;
+  }
 }
 
 @font-face {
@@ -62,13 +81,67 @@ body {
   width: 210.32px;
   height: 68px;
 }
+@media only screen and (max-width : 768px) {
+  .containerHearder {
+    width: 768px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .containerHearder img {
+    width: 140px;
+    height: 45px;
+    margin-bottom: 10px;
+  }
+  .containerHearder nav {
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+  .containerHearder nav a {
+    margin: 0 20px;
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width : 480px) {
+  .containerHearder {
+    width: 90%;
+    margin-top: 5px;
+  }
+  .containerHearder img {
+    width: 120px;
+    height: 38.75px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .containerHearder nav {
+    margin-top: 10px;
+    margin-left: 40px;
+    flex-wrap: wrap;
+  }
+  .containerHearder nav a {
+    margin: 0 10px 10px;
+    font-size: 16px;
+  }
+}
 
+nav {
+  display: flex;
+}
 nav a {
   text-decoration: none;
   color: #ff6060;
   font-size: 24px;
   font-family: "medium";
   margin-left: 57px;
+}
+nav a.active {
+  text-decoration: underline;
+}
+nav a.active::after {
+  text-decoration: none;
 }
 
 @font-face {
@@ -99,6 +172,37 @@ nav a {
   color: #f6f6f6;
   font-size: 48px;
   font-weight: 500;
+}
+@media only screen and (max-width : 768px) {
+  .main-container {
+    width: 768px;
+    height: 150px;
+    top: 120px;
+    margin-top: 50px;
+  }
+  .main-container .opacityBg {
+    max-width: 768px;
+    height: 150px;
+  }
+  .main-container .opacityBg h1 {
+    font-size: 36px;
+  }
+}
+@media only screen and (max-width : 480px) {
+  .main-container {
+    width: 335px;
+    height: 111px;
+    top: 80px;
+    margin-top: 30px;
+  }
+  .main-container .opacityBg {
+    max-width: 335px;
+    height: 111px;
+  }
+  .main-container .opacityBg h1 {
+    font-size: 24px;
+    margin: 10px;
+  }
 }
 
 @font-face {
@@ -141,6 +245,26 @@ nav a {
   margin: 20px;
   z-index: 2;
 }
+@media only screen and (max-width : 768px) {
+  .ContainerCard {
+    width: 290px;
+    height: 290px;
+  }
+  .ContainerCard .BgFiltre h1 {
+    font-size: 16px;
+    margin: 15px;
+  }
+}
+@media only screen and (max-width : 480px) {
+  .ContainerCard {
+    width: 90vw;
+    height: 255px;
+  }
+  .ContainerCard .BgFiltre h1 {
+    font-size: 14px;
+    margin: 10px;
+  }
+}
 
 @font-face {
   font-family: "Medium";
@@ -151,7 +275,6 @@ nav a {
 .collapse {
   margin: 10px 0;
 }
-
 .collapse button {
   display: flex;
   align-items: center;
@@ -165,28 +288,63 @@ nav a {
   border: none;
   cursor: pointer;
 }
-
 .collapse button img {
   width: 24px;
   height: 13.71px;
   margin-left: 10px;
   transition: transform 0.2s ease-in-out;
 }
-
 .collapse button.open img {
   transform: rotate(180deg);
 }
-
-.collapse-content {
+.collapse .collapse-content {
   font-size: 24px;
   max-width: 1023px;
+  width: 100%;
   padding: 20px;
   background-color: #f6f6f6;
   color: #ff6060;
   border-top: none;
   border-radius: 0 0 5px 5px;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media only screen and (max-width : 768px) {
+  .collapse button {
+    width: 600px;
+  }
+  .collapse .collapse-content {
+    font-size: 20px;
+    padding: 15px;
+    width: 600px;
+  }
+}
+@media only screen and (max-width : 480px) {
+  .collapse button {
+    font-size: 13px !important;
+    height: 30px;
+    padding: 5px 10px;
+    width: 335px;
+  }
+  .collapse button img {
+    width: 20px;
+    height: 11.47px;
+    margin-left: 5px;
+  }
+  .collapse .collapse-content {
+    font-size: 12px !important;
+    width: 335px;
+    padding: 10px;
+  }
 }
 
+@font-face {
+  font-family: "Medium";
+  src: local("Montserrat-Medium"), url("../../assets/font/Montserrat-Medium.ttf") format("truetype");
+}
+/*|---------------| App Color Schema|---------------*/
+/*|---------------|MIXINS|---------------*/
 .SliderContainer {
   display: flex;
   position: relative;
@@ -198,6 +356,22 @@ nav a {
   justify-content: center;
   align-items: flex-end;
 }
+@media only screen and (max-width : 1200px) {
+  .SliderContainer {
+    width: 100%;
+  }
+}
+@media only screen and (max-width : 768px) {
+  .SliderContainer {
+    height: 250px;
+  }
+}
+@media only screen and (max-width : 480px) {
+  .SliderContainer {
+    height: 150px;
+    border-radius: 0;
+  }
+}
 
 .SliderContainer img {
   -o-object-fit: cover;
@@ -206,6 +380,16 @@ nav a {
   width: 100%;
   height: 415px;
   z-index: -1;
+}
+@media only screen and (max-width : 768px) {
+  .SliderContainer img {
+    height: 250px;
+  }
+}
+@media only screen and (max-width : 480px) {
+  .SliderContainer img {
+    height: 150px;
+  }
 }
 
 .SliderContainer button {
@@ -218,6 +402,12 @@ nav a {
   outline: none;
   border: none;
 }
+@media only screen and (max-width : 480px) {
+  .SliderContainer button {
+    width: 20px;
+    height: 20px;
+  }
+}
 
 .SliderContainer button img {
   width: 100%;
@@ -228,10 +418,20 @@ nav a {
   margin: 0;
   left: 20px;
 }
+@media only screen and (max-width : 480px) {
+  .SliderContainer button.prev {
+    left: 10px;
+  }
+}
 
 .SliderContainer button.next {
   margin: 0;
   right: 20px;
+}
+@media only screen and (max-width : 480px) {
+  .SliderContainer button.next {
+    right: 10px;
+  }
 }
 
 .current-photo-number {
@@ -240,6 +440,18 @@ nav a {
   padding: 5px 10px;
   position: absolute;
   padding: 24px;
+}
+@media only screen and (max-width : 768px) {
+  .current-photo-number {
+    font-size: 16px;
+    padding: 20px;
+  }
+}
+@media only screen and (max-width : 480px) {
+  .current-photo-number {
+    font-size: 12px;
+    padding: 10px;
+  }
 }
 
 @font-face {
@@ -286,6 +498,22 @@ nav a {
   border-radius: 25px;
   gap: 30px;
 }
+@media only screen and (max-width : 768px) {
+  .home-container .gallery {
+    padding: 30px;
+    gap: 20px;
+    border-radius: 20px;
+    background-color: transparent;
+  }
+}
+@media only screen and (max-width : 480px) {
+  .home-container .gallery {
+    padding: 20px;
+    gap: 10px;
+    border-radius: 15px;
+    background-color: transparent;
+  }
+}
 
 @font-face {
   font-family: "Medium";
@@ -301,6 +529,7 @@ nav a {
 }
 .mainAbout .containerCollapse {
   position: relative;
+  padding-top: 20px;
 }
 .mainAbout button {
   padding-left: 18.8px;
@@ -309,20 +538,10 @@ nav a {
   font-weight: 500;
   color: #f6f6f6;
   background-color: #ff6060;
-  width: 1023px;
-  height: 47px;
-  border: none;
-  display: block;
-  float: none;
-  margin: 30px auto 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-right: 18.8px;
-}
-.mainAbout button img {
-  width: 20px;
-  margin-left: 10px;
 }
 
 @font-face {
@@ -334,16 +553,30 @@ nav a {
 .mainLodging {
   display: flex;
   flex-direction: column;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media only screen and (max-width : 1200px) {
+  .mainLodging {
+    padding: 0;
+  }
 }
 
 .lodging-info {
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding: 20px 100px 0px 100px;
+  align-items: center;
+  padding: 20px;
+}
+@media only screen and (max-width : 1200px) {
+  .lodging-info {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 100px 0px 100px;
+  }
 }
 
 .titleLodging {
@@ -379,10 +612,9 @@ nav a {
   max-width: 30%;
   justify-content: flex-end;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width : 1200px) {
   .ProfilLodging p {
-    margin-right: 0;
-    margin-bottom: 10px;
+    max-width: none;
   }
 }
 
@@ -392,14 +624,63 @@ img {
 
 .tagContainer {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+@media only screen and (max-width : 1200px) {
+  .tagContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 100px 0px 100px;
+  }
 }
 .tagContainer .tags {
   display: flex;
+  margin: 10px 0;
+}
+@media only screen and (max-width : 1200px) {
+  .tagContainer .tags {
+    margin: 0px;
+  }
 }
 
 .equipementContainer {
+  margin: 20px 0;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width : 1200px) {
+  .equipementContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 100px 0px 100px;
+  }
+}
+.equipementContainer .description,
+.equipementContainer .equipments {
+  margin-bottom: 20px;
+}
+.equipementContainer .description button,
+.equipementContainer .equipments button {
+  border-radius: 10px;
+  font-size: 18px;
+  width: 100%;
+  max-width: 582px;
+}
+@media only screen and (max-width : 1200px) {
+  .equipementContainer .description,
+  .equipementContainer .equipments {
+    margin-bottom: 0px;
+  }
+}
+.equipementContainer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 @font-face {

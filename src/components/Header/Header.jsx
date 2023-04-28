@@ -1,8 +1,10 @@
 import "./Header.scss";
 import Logo from "../../assets/img/LOGO.svg";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Header() {
+  const location = useLocation();
+
   return (
     <header className="App">
       <div className="containerHearder">
@@ -10,8 +12,8 @@ function Header() {
           <img src={Logo} alt="logo kasa" />
         </Link>
         <nav>
-          <Link to="/">Accueil</Link>
-          <Link to="/about">A Propos</Link>
+          <Link to="/" className={location.pathname === '/' ? 'active' : ''}>Accueil</Link>
+          <Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>A Propos</Link>
         </nav>
       </div>
     </header>

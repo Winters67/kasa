@@ -35,4 +35,28 @@
       z-index: 2;
     }
   }
+
+  @media #{$BREAKPOINT-TABLETS} {
+    width: 290px;
+    height: 290px;
+
+    .BgFiltre {
+      h1 {
+        font-size: 16px;
+        margin: 15px;
+      }
+    }
+  }
+
+  @media #{$BREAKPOINT-MOBILE} {
+    width: 90vw;
+    height: 255px;
+
+    .BgFiltre {
+      h1 {
+        font-size: 14px;
+        margin: 10px;
+      }
+    }
+  }
 }

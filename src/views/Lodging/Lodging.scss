@@ -5,23 +5,31 @@
   flex-direction: column;
   max-width: 1440px;
   margin: 0 auto;
+  padding: 0 20px;
+
+  @media #{$BREAKPOINT-DESK} {
+    padding: 0;
+  }
 }
 
 .lodging-info {
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  padding: 20px;
 
-  justify-content: space-between;
-  padding: 20px 100px 0px 100px;
+  @media #{$BREAKPOINT-DESK} {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 100px 0px 100px;
+  }
 }
 
 .titleLodging {
   display: flex;
   flex-direction: column;
-
   margin-bottom: 20px;
   font-weight: 500;
   color: $primary;
@@ -53,9 +61,8 @@
     max-width: 30%;
     justify-content: flex-end;
 
-    @media only screen and (max-width: 768px) {
-      margin-right: 0;
-      margin-bottom: 10px;
+    @media #{$BREAKPOINT-DESK} {
+      max-width: none;
     }
   }
 }
@@ -63,30 +70,57 @@
 img {
   max-width: 100%;
 }
+
 .tagContainer {
   display: flex;
-  justify-content: space-between;
-  margin: 0px 100px 0px 100px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+
+  @media #{$BREAKPOINT-DESK} {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 100px 0px 100px;
+  }
+
   .tags {
     display: flex;
-    margin-left: 0px;
+    margin: 10px 0;
+
+    @media #{$BREAKPOINT-DESK} {
+      margin: 0px;
+    }
   }
 }
 
 .equipementContainer {
-  margin: 0px 100px 0px 100px;
+  margin: 20px 0;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media #{$BREAKPOINT-DESK} {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 100px 0px 100px;
+  }
 
   .description,
   .equipments {
+    margin-bottom: 20px;
+
     button {
       border-radius: 10px;
-      width: 582px;
       font-size: 18px;
+      width: 100%;
+      max-width: 582px;
     }
-    width: 582px;
-    font-size: 18px;
+
+    @media #{$BREAKPOINT-DESK} {
+      margin-bottom: 0px;
+    }
   }
 
   ul {

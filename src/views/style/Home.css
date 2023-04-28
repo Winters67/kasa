@@ -19,4 +19,20 @@
   background-color: #f6f6f6;
   border-radius: 25px;
   gap: 30px;
+}
+@media only screen and (max-width : 768px) {
+  .home-container .gallery {
+    padding: 30px;
+    gap: 20px;
+    border-radius: 20px;
+    background-color: transparent;
+  }
+}
+@media only screen and (max-width : 480px) {
+  .home-container .gallery {
+    padding: 20px;
+    gap: 10px;
+    border-radius: 15px;
+    background-color: transparent;
+  }
 }/*# sourceMappingURL=Home.css.map */

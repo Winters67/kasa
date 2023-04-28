@@ -5,6 +5,7 @@
 /*|---------------| App Color Schema|---------------*/
 /*|---------------|MIXINS|---------------*/
 .ContainerFooter {
+  position: relative;
   background-color: #000000;
   bottom: 0;
   color: #f6f6f6;
@@ -16,6 +17,7 @@
   flex-direction: column;
   align-items: center;
   margin-top: 80px;
+  width: 100%;
 }
 .ContainerFooter img {
   margin-top: 66px;
@@ -25,4 +27,21 @@
 .ContainerFooter p {
   margin-bottom: 29px;
   font-size: 24px;
+}
+@media only screen and (max-width : 768px) {
+  .ContainerFooter {
+    width: 100vh;
+  }
+  .ContainerFooter p {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width : 480px) {
+  .ContainerFooter {
+    width: 100%;
+  }
+  .ContainerFooter p {
+    margin-bottom: 15px;
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=Footer.css.map */

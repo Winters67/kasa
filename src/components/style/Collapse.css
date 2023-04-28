@@ -5,14 +5,13 @@
 /*|---------------| App Color Schema|---------------*/
 /*|---------------|MIXINS|---------------*/
 .collapse {
-  margin: 10px 0;
+  margin: 30px 0;
 }
-
 .collapse button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  padding: 20px;
   width: 1023px;
   height: 47px;
   font-weight: 500;
@@ -21,24 +20,56 @@
   border: none;
   cursor: pointer;
 }
-
 .collapse button img {
   width: 24px;
   height: 13.71px;
   margin-left: 10px;
   transition: transform 0.2s ease-in-out;
 }
-
 .collapse button.open img {
   transform: rotate(180deg);
 }
-
-.collapse-content {
+.collapse .collapse-content {
   font-size: 24px;
   max-width: 1023px;
+  width: 100%;
   padding: 20px;
   background-color: #f6f6f6;
   color: #ff6060;
   border-top: none;
   border-radius: 0 0 5px 5px;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media only screen and (max-width : 768px) {
+  .collapse button {
+    width: 600px;
+  }
+  .collapse .collapse-content {
+    font-size: 20px;
+    padding: 15px;
+    width: 600px;
+  }
+}
+@media only screen and (max-width : 480px) {
+  .collapse {
+    margin: 20px 0;
+  }
+  .collapse button {
+    font-size: 13px !important;
+    height: 30px;
+    padding: 5px 10px;
+    width: 335px;
+  }
+  .collapse button img {
+    width: 20px;
+    height: 11.47px;
+    margin-left: 5px;
+  }
+  .collapse .collapse-content {
+    font-size: 12px !important;
+    width: 335px;
+    padding: 10px;
+  }
 }/*# sourceMappingURL=Collapse.css.map */

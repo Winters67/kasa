@@ -18,17 +18,11 @@ $Bg-gradient: linear-gradient(
 
 // /*|---------------| @media #{$BREAKPOINT-DESK}|---------------*/
 
-$BREAKPOINT-DESK: "only screen and (min-width: 1280px)";
-$BREAKPOINT-TABLET-LAND: "only screen and (min-width: 975px)";
-$BREAKPOINT-TABLET: "only screen and (min-width: 600px)";
-$BREAKPOINT-MOBILE-LAND: "only screen and (min-width: 480px)";
+$BREAKPOINT-DESK: "only screen and (max-width : 1200px)";
+$BREAKPOINT-TABLETS: "only screen and (max-width : 768px)";
+$BREAKPOINT-MOBILE: "only screen and (max-width : 480px)";
 
 /*|---------------|MIXINS|---------------*/
-// @mixin BREAKPOINT-DESK {
-//   @media #{$BREAKPOINT-DESK} {
-//     max-width: 1440px;
-//   }
-// }
 
 @mixin button {
   padding-left: 18.8px;
@@ -37,15 +31,4 @@ $BREAKPOINT-MOBILE-LAND: "only screen and (min-width: 480px)";
   font-weight: 500;
   color: $secondary;
   background-color: #ff6060;
-  width: 1023px;
-  height: 47px;
-  border: none;
-  display: block;
-  float: none;
-  margin: 30px auto 0;
-
-  img {
-    width: 20px;
-    margin-left: 10px;
   }
-}

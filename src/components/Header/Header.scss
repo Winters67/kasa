@@ -1,30 +1,80 @@
 @import "../../assets/scss/config.scss";
 
 .containerHearder {
-  
-width: 1240px;
-margin: auto;
- display: flex;
- justify-content: space-between;
- margin-top: 20px;
-align-items: center;
+  width: 1240px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: center;
 
-
-  
   img {
     width: 210.32px;
     height: 68px;
   }
 
-  
+  @media #{$BREAKPOINT-TABLETS} {
+    width: 768px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+
+    img {
+      width: 140px;
+      height: 45px;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      margin-top: 10px;
+      margin-left: 20px;
+      a {
+        margin: 0 20px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  @media #{$BREAKPOINT-MOBILE} {
+    width: 90%;
+    margin-top: 5px;
+
+    img {
+      width: 120px;
+      height: 38.75px;
+      margin-right: auto;
+      margin-left: auto;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      margin-top: 10px;
+      margin-left: 40px;
+      flex-wrap: wrap;
+      a {
+        margin: 0 10px 10px;
+        font-size: 16px;
+      }
+    }
+  }
 }
 
 nav {
+  display: flex;
+
   a {
     text-decoration: none;
     color: $primary;
     font-size: 24px;
     font-family: "medium";
     margin-left: 57px;
+    &.active {
+      text-decoration: underline;
+      &::after {
+        text-decoration: none;
+      }
+    }
   }
 }

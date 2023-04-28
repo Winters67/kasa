@@ -1,3 +1,5 @@
+@import "../../assets/scss/config.scss";
+
 .SliderContainer {
   display: flex;
   position: relative;
@@ -8,6 +10,20 @@
   border-radius: 25px;
   justify-content: center;
   align-items: flex-end;
+
+  // Styles pour les écrans plus petits
+  @media #{$BREAKPOINT-DESK} {
+    width: 100%;
+  }
+
+  @media #{$BREAKPOINT-TABLETS} {
+    height: 250px;
+  }
+
+  @media #{$BREAKPOINT-MOBILE} {
+    height: 150px;
+    border-radius: 0;
+  }
 }
 
 .SliderContainer img {
@@ -16,6 +32,15 @@
   width: 100%;
   height: 415px;
   z-index: -1;
+
+  // Styles pour les écrans plus petits
+  @media #{$BREAKPOINT-TABLETS} {
+    height: 250px;
+  }
+
+  @media #{$BREAKPOINT-MOBILE} {
+    height: 150px;
+  }
 }
 
 .SliderContainer button {
@@ -27,20 +52,37 @@
   height: 30px;
   outline: none;
   border: none;
+
+  // Styles pour les écrans plus petits
+  @media #{$BREAKPOINT-MOBILE} {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .SliderContainer button img {
   width: 100%;
   height: auto;
 }
+
 .SliderContainer button.prev {
   margin: 0;
   left: 20px;
+
+  // Styles pour les écrans plus petits
+  @media #{$BREAKPOINT-MOBILE} {
+    left: 10px;
+  }
 }
 
 .SliderContainer button.next {
   margin: 0;
   right: 20px;
+
+  // Styles pour les écrans plus petits
+  @media #{$BREAKPOINT-MOBILE} {
+    right: 10px;
+  }
 }
 
 .current-photo-number {
@@ -49,4 +91,15 @@
   padding: 5px 10px;
   position: absolute;
   padding: 24px;
+
+  // Styles pour les écrans plus petits
+  @media #{$BREAKPOINT-TABLETS} {
+    font-size: 16px;
+    padding: 20px;
+  }
+
+  @media #{$BREAKPOINT-MOBILE} {
+    font-size: 12px;
+    padding: 10px;
+  }
 }
