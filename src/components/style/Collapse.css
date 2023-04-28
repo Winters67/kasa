@@ -5,15 +5,14 @@
 /*|---------------| App Color Schema|---------------*/
 /*|---------------|MIXINS|---------------*/
 .collapse {
-  margin: 30px 0;
+  margin: 10px 0;
+  max-width: 100%;
 }
 .collapse button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
-  width: 1023px;
-  height: 47px;
+  padding: 10px;
   font-weight: 500;
   background-color: #ff6060;
   color: #ffffff;
@@ -31,7 +30,6 @@
 }
 .collapse .collapse-content {
   font-size: 24px;
-  max-width: 1023px;
   width: 100%;
   padding: 20px;
   background-color: #f6f6f6;
@@ -43,33 +41,15 @@
   text-overflow: ellipsis;
 }
 @media only screen and (max-width : 768px) {
-  .collapse button {
-    width: 600px;
-  }
   .collapse .collapse-content {
     font-size: 20px;
-    padding: 15px;
-    width: 600px;
   }
 }
 @media only screen and (max-width : 480px) {
-  .collapse {
-    margin: 20px 0;
-  }
   .collapse button {
     font-size: 13px !important;
-    height: 30px;
-    padding: 5px 10px;
-    width: 335px;
-  }
-  .collapse button img {
-    width: 20px;
-    height: 11.47px;
-    margin-left: 5px;
   }
   .collapse .collapse-content {
     font-size: 12px !important;
-    width: 335px;
-    padding: 10px;
   }
 }/*# sourceMappingURL=Collapse.css.map */

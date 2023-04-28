@@ -9,16 +9,21 @@
   .containerCollapse {
     position: relative;
     padding-top: 20px;
-    
+  }
+
+  .collapse {
+    width: 1023px;
+    @media #{$BREAKPOINT-MOBILE} {
+      width: 335px;
+    }
   }
 
   button {
-    
+    width: 100%;
     @include button;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-right: 18.8px;
-   
   }
 }

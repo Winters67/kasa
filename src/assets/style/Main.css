@@ -199,9 +199,16 @@ nav a.active::after {
     max-width: 335px;
     height: 111px;
   }
-  .main-container .opacityBg h1 {
+  .main-container .opacityBg .banner-text {
+    display: flex;
+    flex-direction: column;
     font-size: 24px;
-    margin: 10px;
+  }
+  .main-container .opacityBg .banner-text span:first-child {
+    width: 100%;
+  }
+  .main-container .opacityBg .banner-text span:last-child {
+    white-space: pre-wrap;
   }
 }
 
@@ -273,13 +280,13 @@ nav a.active::after {
 /*|---------------| App Color Schema|---------------*/
 /*|---------------|MIXINS|---------------*/
 .collapse {
-  margin: 10px 0;
+  margin: 30px 0;
 }
 .collapse button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  padding: 20px;
   width: 1023px;
   height: 47px;
   font-weight: 500;
@@ -321,6 +328,9 @@ nav a.active::after {
   }
 }
 @media only screen and (max-width : 480px) {
+  .collapse {
+    margin: 20px 0;
+  }
   .collapse button {
     font-size: 13px !important;
     height: 30px;
@@ -557,13 +567,7 @@ nav a.active::after {
   margin: 0 auto;
   padding: 0 20px;
 }
-@media only screen and (max-width : 1200px) {
-  .mainLodging {
-    padding: 0;
-  }
-}
-
-.lodging-info {
+.mainLodging .lodging-info {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -571,39 +575,30 @@ nav a.active::after {
   align-items: center;
   padding: 20px;
 }
-@media only screen and (max-width : 1200px) {
-  .lodging-info {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 20px 100px 0px 100px;
-  }
-}
-
-.titleLodging {
+.mainLodging .lodging-info .titleLodging {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
   font-weight: 500;
   color: #ff6060;
 }
-.titleLodging h1 {
+.mainLodging .lodging-info .titleLodging h1 {
   font-size: 36px;
 }
-.titleLodging .h4 {
+.mainLodging .lodging-info .titleLodging .h4 {
   font-size: 18px;
 }
-
-.ProfilLodging {
+.mainLodging .lodging-info .ProfilLodging {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-.ProfilLodging img {
+.mainLodging .lodging-info .ProfilLodging img {
   width: 64px;
   border-radius: 50%;
   align-items: center;
 }
-.ProfilLodging p {
+.mainLodging .lodging-info .ProfilLodging p {
   display: flex;
   margin-right: 20px;
   font-size: 18px;
@@ -612,72 +607,43 @@ nav a.active::after {
   max-width: 30%;
   justify-content: flex-end;
 }
-@media only screen and (max-width : 1200px) {
-  .ProfilLodging p {
-    max-width: none;
-  }
-}
-
-img {
+.mainLodging .lodging-info img {
   max-width: 100%;
 }
-
-.tagContainer {
+.mainLodging .lodging-info .tagContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 20px 0;
 }
-@media only screen and (max-width : 1200px) {
-  .tagContainer {
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0px 100px 0px 100px;
-  }
-}
-.tagContainer .tags {
+.mainLodging .lodging-info .tagContainer .tags {
   display: flex;
   margin: 10px 0;
+  max-width: 115px;
 }
-@media only screen and (max-width : 1200px) {
-  .tagContainer .tags {
-    margin: 0px;
-  }
+.mainLodging .lodging-info .tagContainer .tags .tag {
+  max-width: 115px;
 }
-
-.equipementContainer {
+.mainLodging .lodging-info .equipementContainer {
   margin: 20px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-@media only screen and (max-width : 1200px) {
-  .equipementContainer {
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0px 100px 0px 100px;
-  }
-}
-.equipementContainer .description,
-.equipementContainer .equipments {
+.mainLodging .lodging-info .equipementContainer .description,
+.mainLodging .lodging-info .equipementContainer .equipments {
   margin-bottom: 20px;
 }
-.equipementContainer .description button,
-.equipementContainer .equipments button {
+.mainLodging .lodging-info .equipementContainer .description button,
+.mainLodging .lodging-info .equipementContainer .equipments button {
   border-radius: 10px;
   font-size: 18px;
   width: 100%;
   max-width: 582px;
 }
-@media only screen and (max-width : 1200px) {
-  .equipementContainer .description,
-  .equipementContainer .equipments {
-    margin-bottom: 0px;
-  }
-}
-.equipementContainer ul {
+.mainLodging .lodging-info .equipementContainer ul {
   list-style-type: none;
   padding: 0;
   margin: 0;

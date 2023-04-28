@@ -29,38 +29,41 @@ const Lodging = () => {
           onChange={handleSliderChange}
         />
       </section>
+
       <section className="lodging-info">
         <div className="titleLodging">
-          <h1>{lodging.title}</h1>
-          <h4>{lodging.location}</h4>
+          <div>
+            <h1>{lodging.title}</h1>
+            <h4>{lodging.location}</h4>
+          </div>
+          <div className="ProfilLodging">
+            <p>{lodging.host.name}</p>
+            <img src={pictureProfil} alt="profile" />
+          </div>
         </div>
-        <div className="ProfilLodging">
-          <p>{lodging.host.name}</p>
-          <img src={pictureProfil} alt="profile" />
+        <div className="tagContainer">
+          <div className="tags">
+            {lodging.tags.map((tag, index) => (
+              <Tag tag={tag} key={index} />
+            ))}
+          </div>
+          <Star rating={lodging.rating} />
+        </div>
+        <div className="equipementContainer">
+          <div className="description">
+            <Collapse title={`Description`} text={lodging.description} />
+          </div>
+          <div className="equipments">
+            <Collapse title={`Équipements`}>
+              <ul>
+                {lodging.equipments.map((equipments, index) => (
+                  <li key={index}>{equipments}</li>
+                ))}
+              </ul>
+            </Collapse>
+          </div>
         </div>
       </section>
-      <div className="tagContainer">
-        <div className="tags">
-          {lodging.tags.map((tag, index) => (
-            <Tag tag={tag} key={index} />
-          ))}
-        </div>
-        <Star rating={lodging.rating} />
-      </div>
-      <div className="equipementContainer">
-        <div className="description">
-          <Collapse title={`Description`} text={lodging.description} />
-        </div>
-        <div className="equipments">
-          <Collapse title={`Équipements`}>
-            <ul>
-              {lodging.equipments.map((equipments, index) => (
-                <li key={index}>{equipments}</li>
-              ))}
-            </ul>
-          </Collapse>
-        </div>
-      </div>
     </main>
   );
 };

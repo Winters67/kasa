@@ -9,39 +9,107 @@
   flex-direction: column;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 20px 100px 0 100px;
 }
-@media only screen and (max-width : 1200px) {
+@media only screen and (max-width : 768px) {
   .mainLodging {
-    padding: 0;
+    padding: 20px;
+  }
+}
+@media only screen and (max-width : 480px) {
+  .mainLodging {
+    padding: 10px;
   }
 }
 
 .lodging-info {
   width: 100%;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
 }
-@media only screen and (max-width : 1200px) {
+@media only screen and (max-width : 768px) {
   .lodging-info {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 20px 100px 0px 100px;
+    padding: 10px;
+  }
+}
+
+.equipementContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.equipementContainer .description,
+.equipementContainer .equipments {
+  width: 582px;
+  height: auto;
+}
+.equipementContainer button {
+  width: 100%;
+  border-radius: 10px;
+}
+.equipementContainer .collapse-content {
+  font-size: 18px;
+}
+.equipementContainer .collapse-content ul {
+  list-style-type: none;
+}
+.equipementContainer .collapse-content ul li {
+  font-size: 18px;
+  color: #ff6060;
+  margin-bottom: 10px;
+}
+@media only screen and (max-width : 768px) {
+  .equipementContainer .collapse-content {
+    flex-direction: column;
+  }
+  .equipementContainer .collapse-content .description,
+  .equipementContainer .collapse-content .equipments {
+    width: 450px;
+    height: auto;
+  }
+}
+@media only screen and (max-width : 480px) {
+  .equipementContainer {
+    flex-direction: column;
+  }
+  .equipementContainer .description,
+  .equipementContainer .equipments {
+    width: 335px;
+    height: auto;
+  }
+  .equipementContainer .collapse-content {
+    font-size: 18px;
+  }
+  .equipementContainer .collapse-content ul {
+    list-style-type: none;
+  }
+  .equipementContainer .collapse-content ul li {
+    font-size: 12px;
+    color: #ff6060;
+    margin-bottom: 10px;
   }
 }
 
 .titleLodging {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   margin-bottom: 20px;
   font-weight: 500;
   color: #ff6060;
+  margin-top: 20px;
 }
 .titleLodging h1 {
   font-size: 36px;
+}
+@media only screen and (max-width : 768px) {
+  .titleLodging h1 {
+    font-size: 28px;
+  }
+}
+@media only screen and (max-width : 480px) {
+  .titleLodging h1 {
+    font-size: 24px;
+  }
 }
 .titleLodging .h4 {
   font-size: 18px;
@@ -66,9 +134,9 @@
   max-width: 30%;
   justify-content: flex-end;
 }
-@media only screen and (max-width : 1200px) {
+@media only screen and (max-width : 768px) {
   .ProfilLodging p {
-    max-width: none;
+    margin-right: 10px;
   }
 }
 
@@ -78,61 +146,40 @@ img {
 
 .tagContainer {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  margin: 20px 0;
-}
-@media only screen and (max-width : 1200px) {
-  .tagContainer {
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0px 100px 0px 100px;
-  }
+  margin-top: 20px;
 }
 .tagContainer .tags {
   display: flex;
-  margin: 10px 0;
+  flex-wrap: wrap;
+  margin-right: 5px;
 }
-@media only screen and (max-width : 1200px) {
+@media only screen and (max-width : 480px) {
   .tagContainer .tags {
-    margin: 0px;
+    justify-content: center;
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 }
-
-.equipementContainer {
-  margin: 20px 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.tagContainer .tag {
+  margin: 5px;
+  font-size: 16px;
+  padding: 5px 10px;
+  background-color: #ff6060;
+  border-radius: 20px;
 }
-@media only screen and (max-width : 1200px) {
-  .equipementContainer {
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0px 100px 0px 100px;
+@media only screen and (max-width : 768px) {
+  .tagContainer .tag {
+    font-size: 14px;
+    padding: 3px 8px;
   }
 }
-.equipementContainer .description,
-.equipementContainer .equipments {
-  margin-bottom: 20px;
-}
-.equipementContainer .description button,
-.equipementContainer .equipments button {
-  border-radius: 10px;
-  font-size: 18px;
-  width: 100%;
-  max-width: 582px;
-}
-@media only screen and (max-width : 1200px) {
-  .equipementContainer .description,
-  .equipementContainer .equipments {
-    margin-bottom: 0px;
+@media only screen and (max-width : 480px) {
+  .tagContainer .tag {
+    font-size: 12px;
+    padding: 2px 5px;
+    margin: 5px 0;
   }
-}
-.equipementContainer ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
 }/*# sourceMappingURL=Lodging.css.map */

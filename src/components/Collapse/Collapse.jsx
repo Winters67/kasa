@@ -1,31 +1,28 @@
 import React, { useState } from "react";
-import "./Collapse.scss"
+import "./Collapse.scss";
 import dropdown from "../../assets/img/dropdown.png";
 
 const Collapse = ({ visible, children, title, text }) => {
   const [open, setOpen] = useState(false);
-  const [buttonClass, setButtonClass] = useState("");
 
   const toggle = () => {
     setOpen(!open);
-    setButtonClass(open ? "" : "open");
   };
 
-  let className = 'fade ';
-  if (!visible) {
-    className += 'out';
-  }
-
   return (
-    <div className={className}>
+    <div className={`fade ${visible ? "" : "out"}`}>
       <div className="collapse">
-        <button onClick={toggle} className={buttonClass}>
+        <button
+          onClick={toggle}
+          className={`collapse-button ${open ? "open" : ""}`}
+        >
           {title}
           <img className="dropdown" src={dropdown} alt="dropdown" />
         </button>
         {open && (
           <div className="collapse-content">
-            {text}{children}
+            <p>{text}</p>
+            {children}
           </div>
         )}
       </div>

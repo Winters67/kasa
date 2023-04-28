@@ -5,38 +5,105 @@
   flex-direction: column;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 20px 100px 0 100px;
 
-  @media #{$BREAKPOINT-DESK} {
-    padding: 0;
+  @media #{$BREAKPOINT-TABLETS} {
+    padding: 20px;
+  }
+
+  @media #{$BREAKPOINT-MOBILE} {
+    padding: 10px;
   }
 }
 
 .lodging-info {
   width: 100%;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
 
-  @media #{$BREAKPOINT-DESK} {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 20px 100px 0px 100px;
+  @media #{$BREAKPOINT-TABLETS} {
+    padding: 10px;
   }
+}
+
+.equipementContainer {
+  display: flex;
+  justify-content: space-between;
+
+  .description,
+  .equipments {
+    width: 582px;
+    height: auto;
+  }
+
+  button {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .collapse-content {
+    font-size: 18px;
+    ul {
+      list-style-type: none;
+
+      li {
+        font-size: 18px;
+        color: $primary;
+        margin-bottom: 10px;
+      }
+    }
+    @media #{$BREAKPOINT-TABLETS} {
+      flex-direction: column;
+      .description,
+      .equipments {
+        width: 450px;
+        height: auto;
+      }
+    }
+  }
+  @media #{$BREAKPOINT-MOBILE} {
+    flex-direction: column;
+    .description,
+    .equipments {
+      width: 335px;
+      height: auto;
+  
+    }
+    .collapse-content {
+      font-size: 18px;
+      ul {
+        list-style-type: none;
+  
+        li {
+          font-size: 12px;
+          color: $primary;
+          margin-bottom: 10px;
+        }
+      }}
+  }
+
 }
 
 .titleLodging {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   margin-bottom: 20px;
   font-weight: 500;
   color: $primary;
+  margin-top: 20px;
 
   h1 {
     font-size: 36px;
+
+    @media #{$BREAKPOINT-TABLETS} {
+      font-size: 28px;
+    }
+
+    @media #{$BREAKPOINT-MOBILE} {
+      font-size: 24px;
+    }
   }
+
   .h4 {
     font-size: 18px;
   }
@@ -52,6 +119,7 @@
     border-radius: 50%;
     align-items: center;
   }
+
   p {
     display: flex;
     margin-right: 20px;
@@ -61,8 +129,8 @@
     max-width: 30%;
     justify-content: flex-end;
 
-    @media #{$BREAKPOINT-DESK} {
-      max-width: none;
+    @media #{$BREAKPOINT-TABLETS} {
+      margin-right: 10px;
     }
   }
 }
@@ -73,59 +141,40 @@ img {
 
 .tagContainer {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  margin: 20px 0;
-
-  @media #{$BREAKPOINT-DESK} {
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0px 100px 0px 100px;
-  }
+  margin-top: 20px;
 
   .tags {
     display: flex;
-    margin: 10px 0;
+    flex-wrap: wrap;
+    margin-right: 5px;
 
-    @media #{$BREAKPOINT-DESK} {
-      margin: 0px;
-    }
-  }
-}
-
-.equipementContainer {
-  margin: 20px 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  @media #{$BREAKPOINT-DESK} {
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0px 100px 0px 100px;
-  }
-
-  .description,
-  .equipments {
-    margin-bottom: 20px;
-
-    button {
-      border-radius: 10px;
-      font-size: 18px;
-      width: 100%;
-      max-width: 582px;
-    }
-
-    @media #{$BREAKPOINT-DESK} {
-      margin-bottom: 0px;
+    @media #{$BREAKPOINT-MOBILE} {
+      justify-content: center;
+      margin-right: 0;
+      margin-bottom: 10px;
     }
   }
 
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  .tag {
+    margin: 5px;
+    font-size: 16px;
+    padding: 5px 10px;
+    background-color: $primary;
+
+    border-radius: 20px;
+
+    @media #{$BREAKPOINT-TABLETS} {
+      font-size: 14px;
+      padding: 3px 8px;
+    }
+
+    @media #{$BREAKPOINT-MOBILE} {
+      font-size: 12px;
+      padding: 2px 5px;
+      margin: 5px 0;
+    }
   }
 }
