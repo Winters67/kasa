@@ -12,8 +12,8 @@ const About = () => {
     <main className="mainAbout" >
       <Banner imageURL={imageURL} />
       <section className="containerCollapse">
-        {squareData.map((square) => (
-          <Collapse title={square.title} text={square.text} />
+        {squareData.map(( square) => (
+          <Collapse key={square.id} title={square.title} text={square.text} />
         ))}
 
       </section>
