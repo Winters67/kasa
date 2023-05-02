@@ -31,24 +31,29 @@ const Lodging = () => {
       </section>
 
       <section className="lodging-info">
-        <div className="titleLodging">
-          <div>
-            <h1>{lodging.title}</h1>
-            <h4>{lodging.location}</h4>
+        <div className="containerTitle">
+          <div className="titleLodging">
+            <div>
+              <h1>{lodging.title}</h1>
+              <h4>{lodging.location}</h4>
+            </div>
+            <div className="tags">
+              {lodging.tags.map((tag, index) => (
+                <Tag tag={tag} key={index} />
+              ))}
+            </div>
           </div>
-          <div className="ProfilLodging">
-            <p>{lodging.host.name}</p>
-            <img src={pictureProfil} alt="profile" />
+          <div className="containerProfil">
+            <div className="ProfilLodging">
+              <p>{lodging.host.name}</p>
+              <img src={pictureProfil} alt="profile" />
+            </div>
+            <div className="starContainer">
+              <Star rating={lodging.rating} index={1} size="24px" margin="5px"/>
+            </div>
           </div>
         </div>
-        <div className="tagContainer">
-          <div className="tags">
-            {lodging.tags.map((tag, index) => (
-              <Tag tag={tag} key={index} />
-            ))}
-          </div>
-          <Star rating={lodging.rating} />
-        </div>
+
         <div className="equipementContainer">
           <div className="description">
             <Collapse title={`Description`} text={lodging.description} />

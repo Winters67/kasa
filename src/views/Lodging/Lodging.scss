@@ -16,6 +16,114 @@
   }
 }
 
+.containerTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media #{$BREAKPOINT-MOBILE} {
+    flex-direction: column;
+  }
+}
+
+.titleLodging {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  font-weight: 500;
+  color: $primary;
+  margin-top: 20px;
+
+  h1 {
+    font-size: 36px;
+
+    @media #{$BREAKPOINT-TABLETS} {
+      font-size: 28px;
+    }
+
+    @media #{$BREAKPOINT-MOBILE} {
+      font-size: 24px;
+    }
+  }
+
+  .h4 {
+    font-size: 18px;
+  }
+
+  .tags {
+    display: flex;
+    padding-top: 20px;
+    margin-bottom: 10px;
+
+    .tag {
+      margin: 5px;
+
+      font-size: 16px;
+      padding: 5px 10px;
+      background-color: $primary;
+      border-radius: 20px;
+
+      @media #{$BREAKPOINT-TABLETS} {
+        font-size: 16px;
+        padding: 3px 8px;
+      }
+
+      @media #{$BREAKPOINT-MOBILE} {
+        font-size: 10px;
+        padding: 2px 5px;
+        margin: 2px 1;
+      }
+    }
+  }
+}
+
+.containerProfil {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .starContainer {
+    justify-content: space-around;
+  }
+  @media #{$BREAKPOINT-MOBILE} {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+
+.ProfilLodging {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  img {
+    width: 64px;
+    border-radius: 50%;
+    align-items: center;
+    @media #{$BREAKPOINT-MOBILE} {
+      width: 32px;
+    }
+  }
+
+  p {
+    display: flex;
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: $primary;
+    max-width: 30%;
+    justify-content: flex-end;
+
+    @media #{$BREAKPOINT-TABLETS} {
+      margin-right: 10px;
+    }
+    @media #{$BREAKPOINT-MOBILE} {
+      font-size: 12px;
+    }
+  }
+}
+
 .lodging-info {
   width: 100%;
   flex-direction: column;
@@ -41,8 +149,10 @@
     width: 100%;
     border-radius: 10px;
   }
+
   .collapse-content {
     font-size: 18px;
+
     ul {
       list-style-type: none;
 
@@ -52,85 +162,39 @@
         margin-bottom: 10px;
       }
     }
+
     @media #{$BREAKPOINT-TABLETS} {
       flex-direction: column;
+
       .description,
       .equipments {
         width: 450px;
         height: auto;
       }
     }
-  }
-  @media #{$BREAKPOINT-MOBILE} {
-    flex-direction: column;
-    .description,
-    .equipments {
-      width: 335px;
-      height: auto;
-  
-    }
-    .collapse-content {
+
+    @media #{$BREAKPOINT-MOBILE} {
       font-size: 18px;
+
       ul {
         list-style-type: none;
-  
+
         li {
           font-size: 12px;
           color: $primary;
           margin-bottom: 10px;
         }
-      }}
-  }
-
-}
-
-.titleLodging {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  font-weight: 500;
-  color: $primary;
-  margin-top: 20px;
-
-  h1 {
-    font-size: 36px;
-
-    @media #{$BREAKPOINT-TABLETS} {
-      font-size: 28px;
-    }
-
-    @media #{$BREAKPOINT-MOBILE} {
-      font-size: 24px;
+      }
     }
   }
 
-  .h4 {
-    font-size: 18px;
-  }
-}
+  @media #{$BREAKPOINT-MOBILE} {
+    flex-direction: column;
 
-.ProfilLodging {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-
-  img {
-    width: 64px;
-    border-radius: 50%;
-    align-items: center;
-  }
-
-  p {
-    display: flex;
-    margin-right: 20px;
-    font-size: 18px;
-    font-weight: 500;
-    color: $primary;
-    max-width: 30%;
-    justify-content: flex-end;
-
-    @media #{$BREAKPOINT-TABLETS} {
-      margin-right: 10px;
+    .description,
+    .equipments {
+      width: 335px;
+      height: auto;
     }
   }
 }
@@ -139,42 +203,22 @@ img {
   max-width: 100%;
 }
 
-.tagContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+.starContainer {
+  text-align: right;
   margin-top: 20px;
 
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: 5px;
+  @media #{$BREAKPOINT-MOBILE} {
+    margin-right: 0;
+    margin-bottom: 10px;
 
-    @media #{$BREAKPOINT-MOBILE} {
-      justify-content: center;
-      margin-right: 0;
-      margin-bottom: 10px;
-    }
-  }
+    $star-size: 12px;
 
-  .tag {
-    margin: 5px;
-    font-size: 16px;
-    padding: 5px 10px;
-    background-color: $primary;
-
-    border-radius: 20px;
-
-    @media #{$BREAKPOINT-TABLETS} {
-      font-size: 14px;
-      padding: 3px 8px;
-    }
-
-    @media #{$BREAKPOINT-MOBILE} {
-      font-size: 12px;
-      padding: 2px 5px;
-      margin: 5px 0;
+    .star {
+      svg {
+        width: $star-size;
+        height: $star-size;
+        margin-right: 5px;
+      }
     }
   }
 }

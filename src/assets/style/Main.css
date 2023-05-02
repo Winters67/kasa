@@ -280,15 +280,14 @@ nav a.active::after {
 /*|---------------| App Color Schema|---------------*/
 /*|---------------|MIXINS|---------------*/
 .collapse {
-  margin: 30px 0;
+  margin: 10px 0;
+  max-width: 100%;
 }
 .collapse button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
-  width: 1023px;
-  height: 47px;
+  padding: 10px;
   font-weight: 500;
   background-color: #ff6060;
   color: #ffffff;
@@ -306,7 +305,6 @@ nav a.active::after {
 }
 .collapse .collapse-content {
   font-size: 24px;
-  max-width: 1023px;
   width: 100%;
   padding: 20px;
   background-color: #f6f6f6;
@@ -318,34 +316,16 @@ nav a.active::after {
   text-overflow: ellipsis;
 }
 @media only screen and (max-width : 768px) {
-  .collapse button {
-    width: 600px;
-  }
   .collapse .collapse-content {
     font-size: 20px;
-    padding: 15px;
-    width: 600px;
   }
 }
 @media only screen and (max-width : 480px) {
-  .collapse {
-    margin: 20px 0;
-  }
   .collapse button {
     font-size: 13px !important;
-    height: 30px;
-    padding: 5px 10px;
-    width: 335px;
-  }
-  .collapse button img {
-    width: 20px;
-    height: 11.47px;
-    margin-left: 5px;
   }
   .collapse .collapse-content {
     font-size: 12px !important;
-    width: 335px;
-    padding: 10px;
   }
 }
 
@@ -486,6 +466,10 @@ nav a.active::after {
   padding: 20px auto;
 }
 
+.star {
+  display: inline-flex;
+}
+
 @font-face {
   font-family: "Medium";
   src: local("Montserrat-Medium"), url("../../assets/font/Montserrat-Medium.ttf") format("truetype");
@@ -541,7 +525,16 @@ nav a.active::after {
   position: relative;
   padding-top: 20px;
 }
+.mainAbout .collapse {
+  width: 1023px;
+}
+@media only screen and (max-width : 480px) {
+  .mainAbout .collapse {
+    width: 335px;
+  }
+}
 .mainAbout button {
+  width: 100%;
   padding-left: 18.8px;
   border-radius: 5px;
   font-size: 24px;
@@ -565,40 +558,90 @@ nav a.active::after {
   flex-direction: column;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 20px 100px 0 100px;
 }
-.mainLodging .lodging-info {
-  width: 100%;
+@media only screen and (max-width : 768px) {
+  .mainLodging {
+    padding: 20px;
+  }
+}
+@media only screen and (max-width : 480px) {
+  .mainLodging {
+    padding: 10px;
+  }
+}
+
+.containerTitle {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 20px;
 }
-.mainLodging .lodging-info .titleLodging {
+@media only screen and (max-width : 480px) {
+  .containerTitle {
+    flex-direction: column;
+  }
+}
+
+.titleLodging {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   margin-bottom: 20px;
   font-weight: 500;
   color: #ff6060;
+  margin-top: 20px;
 }
-.mainLodging .lodging-info .titleLodging h1 {
+.titleLodging h1 {
   font-size: 36px;
 }
-.mainLodging .lodging-info .titleLodging .h4 {
+@media only screen and (max-width : 768px) {
+  .titleLodging h1 {
+    font-size: 28px;
+  }
+}
+@media only screen and (max-width : 480px) {
+  .titleLodging h1 {
+    font-size: 24px;
+  }
+}
+.titleLodging .h4 {
   font-size: 18px;
 }
-.mainLodging .lodging-info .ProfilLodging {
+.titleLodging .tags {
+  display: flex;
+}
+
+.containerProfil {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.containerProfil .starContainer {
+  justify-content: space-around;
+}
+@media only screen and (max-width : 480px) {
+  .containerProfil {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+
+.ProfilLodging {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-.mainLodging .lodging-info .ProfilLodging img {
+.ProfilLodging img {
   width: 64px;
   border-radius: 50%;
   align-items: center;
 }
-.mainLodging .lodging-info .ProfilLodging p {
+@media only screen and (max-width : 480px) {
+  .ProfilLodging img {
+    width: 32px;
+  }
+}
+.ProfilLodging p {
   display: flex;
   margin-right: 20px;
   font-size: 18px;
@@ -607,46 +650,127 @@ nav a.active::after {
   max-width: 30%;
   justify-content: flex-end;
 }
-.mainLodging .lodging-info img {
+@media only screen and (max-width : 768px) {
+  .ProfilLodging p {
+    margin-right: 10px;
+  }
+}
+@media only screen and (max-width : 480px) {
+  .ProfilLodging p {
+    font-size: 12px;
+  }
+}
+
+.lodging-info {
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width : 768px) {
+  .lodging-info {
+    padding: 10px;
+  }
+}
+
+.equipementContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.equipementContainer .description,
+.equipementContainer .equipments {
+  width: 582px;
+  height: auto;
+}
+.equipementContainer button {
+  width: 100%;
+  border-radius: 10px;
+}
+.equipementContainer .collapse-content {
+  font-size: 18px;
+}
+.equipementContainer .collapse-content ul {
+  list-style-type: none;
+}
+.equipementContainer .collapse-content ul li {
+  font-size: 18px;
+  color: #ff6060;
+  margin-bottom: 10px;
+}
+@media only screen and (max-width : 768px) {
+  .equipementContainer .collapse-content {
+    flex-direction: column;
+  }
+  .equipementContainer .collapse-content .description,
+  .equipementContainer .collapse-content .equipments {
+    width: 450px;
+    height: auto;
+  }
+}
+@media only screen and (max-width : 480px) {
+  .equipementContainer .collapse-content {
+    font-size: 18px;
+  }
+  .equipementContainer .collapse-content ul {
+    list-style-type: none;
+  }
+  .equipementContainer .collapse-content ul li {
+    font-size: 12px;
+    color: #ff6060;
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width : 480px) {
+  .equipementContainer {
+    flex-direction: column;
+  }
+  .equipementContainer .description,
+  .equipementContainer .equipments {
+    width: 335px;
+    height: auto;
+  }
+}
+
+img {
   max-width: 100%;
 }
-.mainLodging .lodging-info .tagContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0;
+
+.starContainer {
+  text-align: right;
+  margin-top: 20px;
 }
-.mainLodging .lodging-info .tagContainer .tags {
-  display: flex;
-  margin: 10px 0;
-  max-width: 115px;
+@media only screen and (max-width : 480px) {
+  .starContainer {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .starContainer .star svg {
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+  }
 }
-.mainLodging .lodging-info .tagContainer .tags .tag {
-  max-width: 115px;
+.starContainer .tags .tag {
+  margin: 5px;
+  font-size: 16px;
+  padding: 5px 10px;
+  background-color: #ff6060;
+  border-radius: 20px;
+  width: 84px;
+  height: 18px;
 }
-.mainLodging .lodging-info .equipementContainer {
-  margin: 20px 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+@media only screen and (max-width : 768px) {
+  .starContainer .tags .tag {
+    font-size: 16px;
+    padding: 3px 8px;
+  }
 }
-.mainLodging .lodging-info .equipementContainer .description,
-.mainLodging .lodging-info .equipementContainer .equipments {
-  margin-bottom: 20px;
-}
-.mainLodging .lodging-info .equipementContainer .description button,
-.mainLodging .lodging-info .equipementContainer .equipments button {
-  border-radius: 10px;
-  font-size: 18px;
-  width: 100%;
-  max-width: 582px;
-}
-.mainLodging .lodging-info .equipementContainer ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+@media only screen and (max-width : 480px) {
+  .starContainer .tags .tag {
+    font-size: 12px;
+    padding: 2px 5px;
+    margin: 5px 0;
+  }
 }
 
 @font-face {
