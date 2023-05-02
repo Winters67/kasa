@@ -5,16 +5,42 @@
   align-items: center;
   flex-direction: column;
   color: $primary;
+  
   h1 {
     margin-top: 100px;
     font-weight: 700;
     font-size: 288px;
+    
+    @media #{$BREAKPOINT-TABLETS} {
+      font-size: 180px;
+    }
+
+    @media #{$BREAKPOINT-MOBILE} {
+      font-size: 120px;
+      margin-top: 50px;
+    }
   }
+  
   p {
     font-size: 36px;
+
+    @media #{$BREAKPOINT-TABLETS} {
+      font-size: 28px;
+    }
+
+    @media #{$BREAKPOINT-MOBILE} {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
   }
+  
   a {
     margin-top: 152px;
     color: $primary;
+
+    @media #{$BREAKPOINT-MOBILE} {
+      margin-top: 50px;
+    }
   }
 }

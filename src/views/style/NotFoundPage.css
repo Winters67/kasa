@@ -15,10 +15,38 @@
   font-weight: 700;
   font-size: 288px;
 }
+@media only screen and (max-width : 768px) {
+  .ErreurContainer h1 {
+    font-size: 180px;
+  }
+}
+@media only screen and (max-width : 480px) {
+  .ErreurContainer h1 {
+    font-size: 120px;
+    margin-top: 50px;
+  }
+}
 .ErreurContainer p {
   font-size: 36px;
+}
+@media only screen and (max-width : 768px) {
+  .ErreurContainer p {
+    font-size: 28px;
+  }
+}
+@media only screen and (max-width : 480px) {
+  .ErreurContainer p {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
 }
 .ErreurContainer a {
   margin-top: 152px;
   color: #ff6060;
+}
+@media only screen and (max-width : 480px) {
+  .ErreurContainer a {
+    margin-top: 50px;
+  }
 }/*# sourceMappingURL=NotFoundPage.css.map */

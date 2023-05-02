@@ -1,6 +1,6 @@
 import React from "react";
 import DatasLodging from "../../data/logements.json";
-import { useParams } from "react-router-dom";
+import { useParams, Navigate  } from "react-router-dom";
 import Slider from "../../components/Slider/Slider";
 import Tag from "../../components/Tag/Tag";
 import Star from "../../components/Star/Star";
@@ -10,12 +10,14 @@ import { useState } from "react";
 const Lodging = () => {
   const { id } = useParams();
   const lodging = DatasLodging.find((lodging) => lodging.id === id);
-  // console.log(lodging);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const pictures = lodging.pictures;
   const pictureProfil = lodging.host.picture;
 
+  if (!lodging) {
+    return <Navigate  to="/404" />;
+  }
   function handleSliderChange(newIndex) {
     setCurrentIndex(newIndex);
   }
@@ -49,7 +51,12 @@ const Lodging = () => {
               <img src={pictureProfil} alt="profile" />
             </div>
             <div className="starContainer">
-              <Star rating={lodging.rating} index={1} size="24px" margin="5px"/>
+              <Star
+                rating={lodging.rating}
+                index={1}
+                size="24px"
+                margin="5px"
+              />
             </div>
           </div>
         </div>
