@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Kasa
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Kasa est une application web qui permet aux utilisateurs de rechercher et de réserver des logements dans diverses destinations. Ce projet a été développé dans le cadre d'une formation chez https://openclassrooms.com/fr/.
 
-## Available Scripts
+## Fonctionnalités
 
-In the project directory, you can run:
+- Les utilisateurs peuvent rechercher des logements disponibles en fonction de la destination, de la date d'arrivée et de la date de départ.
+- Les utilisateurs peuvent afficher les détails d'un logement spécifique, notamment ses équipements, sa localisation sur une carte et les avis des clients précédents.
+- Les utilisateurs peuvent réserver un logement en sélectionnant leurs dates souhaitées et en remplissant un formulaire de réservation.
+- Les utilisateurs peuvent consulter leur historique de réservation et annuler une réservation si nécessaire.
 
-### `npm start`
+## Technologies Utilisées
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- ReactJS
+- Node.js
+- SCSS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Pour Commencer
 
-### `npm test`
+1. Cloner le dépôt :
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- https://github.com/Winters67/kasa.git
 
-### `npm run build`
+2. Installer les dépendances :
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Démarrer le serveur de développement :
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- npm start
 
-### `npm run eject`
+4. Ouvrir l'application web à l'adresse `http://localhost:3000`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Déploiement
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- https://projet-11-kasa.netlify.app/
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Licence
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Ce projet est sous licence MIT. Voir https://openclassrooms.com/fr/ pour plus de détails.
