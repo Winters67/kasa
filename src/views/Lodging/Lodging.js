@@ -7,22 +7,30 @@ import Star from "../../components/Star/Star";
 import Collapse from "../../components/Collapse/Collapse";
 import { useState } from "react";
 
+// Composant principal
 const Lodging = () => {
+  // Récupération de l'identifiant du logement depuis l'URL
   const { id } = useParams();
+  // Recherche du logement correspondant dans les données importées
   const lodging = DatasLodging.find((lodging) => lodging.id === id);
 
+  // Définition de l'état local pour l'indice de l'image courante dans le slider
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // Si le logement n'est pas trouvé, on redirige l'utilisateur vers la page 404
   if (!lodging) {
     return <Navigate to="/404" />;
   }
 
+  // Récupération des images du logement
   const pictures = lodging.pictures;
   const pictureProfil = lodging.host.picture;
 
+  // Gestionnaire d'événements pour changer l'indice de l'image courante dans le slider
   function handleSliderChange(newIndex) {
     setCurrentIndex(newIndex);
   }
+
 
   return (
     <main className="mainLodging">

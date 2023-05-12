@@ -12,7 +12,7 @@ function Slider(props) {
     const [value, setValue] = useState(props.defaultValue);
 
 
-// Fonction pour changer la valeur de l'image courante lors du clic sur les flèches gauche ou droite
+    // Fonction pour changer la valeur de l'image courante lors du clic
     function handleClick(index) {
         if (index < 0) {
             setValue(props.pictures.length - 1);
@@ -23,7 +23,7 @@ function Slider(props) {
         }
         props.onChange(index);
     }
-// Calcul du numéro de l'image courante
+    // Calcul du numéro de l'image courante
     const currentPhotoNumber = value + 1;
     return (
         <div className="SliderContainer">
